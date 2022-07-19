@@ -36,7 +36,7 @@ echoHeader("Cross Site Request Forgery");
 		<?php
 		if (isset($_GET["post"])) {
 			$post = getcwd() . "/posts/" .  $_GET["post"] . ".php";
-			if (!unlink($post)) {
+			if (!unlink($post)) { 
 				echo $post;
 				echo ("<h3 class='alert alert-danger'> Error While deleting " .  $_GET['post'] . " </h3>");
 			} else {
